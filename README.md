@@ -1,1 +1,2 @@
 # WhatToEat
+Aplicação de culinaria
