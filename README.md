@@ -22,4 +22,9 @@ Aplicação de culinaria
     <td>Determinar os objetivos a atingir</td>
     <td>Sim</td>
   </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>--</td>
+    <td>Não</td>
+  </tr>
 </table>
