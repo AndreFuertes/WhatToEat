@@ -29,7 +29,7 @@ Aplicação de culinaria
   <tr>
     <td>Alexandre Pereira</td>
     <td>Apresentação dos objetivos a atingir</td>
-    <td>Não</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>4</td>
   </tr>
 </table>
