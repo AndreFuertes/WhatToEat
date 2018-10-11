@@ -24,7 +24,7 @@ Aplicação de culinaria
   </tr>
   <tr>
     <td>Alexandre Pereira</td>
-    <td>--</td>
+    <td>Apresentação dos objetivos a atingir</td>
     <td>Não</td>
   </tr>
 </table>
