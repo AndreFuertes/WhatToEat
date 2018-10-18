@@ -30,18 +30,18 @@ Aplicação de culinaria
     <td>Alexandre Pereira</td>
     <td>Apresentação dos objetivos a atingir</td>
     <td>Sim</td>
-    <td>-4</td>
+    <td>4</td>
   </tr>
   <tr>
     <td>José Mauricio</td>
     <td>--</td>
-    <td>?</td>
+    <td>--</td>
     <td>--</td>
   </tr>
   <tr>
     <td>André Fuertes</td>
     <td>--</td>
-    <td>Não</td>
+    <td>--</td>
     <td>--</td>
   </tr>
 </table>
