@@ -33,20 +33,8 @@ Aplicação de culinaria
     <td>4</td>
   </tr>
   <tr>
-    <td>José Mauricio</td>
-    <td>--</td>
-    <td>--</td>
-    <td>--</td>
-  </tr>
-  <tr>
     <td>André Fuertes</td>
-    <td>--</td>
-    <td>--</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>Alexandre Pereira</td>
-    <td>Elaboração do rascunho para a base de dados e continuação das tarefas anteriores</td>
+    <td>Elaboração dos templates para o site e aplicação</td>
     <td>?</td>
     <td>--</td>
   </tr>
