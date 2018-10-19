@@ -44,4 +44,10 @@ Aplicação de culinaria
     <td>--</td>
     <td>--</td>
   </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Elaboração do rascunho para a base de dados e continuação das tarefas anteriores</td>
+    <td>?</td>
+    <td>--</td>
+  </tr>
 </table>
