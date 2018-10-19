@@ -35,7 +35,7 @@ Aplicação de culinaria
   <tr>
     <td>André Fuertes</td>
     <td>Elaboração dos templates para o site e aplicação</td>
-    <td>?</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>3</td>
   </tr>
 </table>
