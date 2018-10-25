@@ -38,4 +38,10 @@ Aplicação de culinaria
     <td>Sim</td>
     <td>3</td>
   </tr>
+  <tr>
+    <td>José Mauricio</td>
+    <td>Base de Dados</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
 </table>
