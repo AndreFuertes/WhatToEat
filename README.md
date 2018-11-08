@@ -44,4 +44,10 @@ Aplicação de culinaria
     <td>--</td>
     <td>--</td>
   </tr>
+   <tr>
+    <td>José Mauricio</td>
+    <td>Seleção de WebTemplate & Design da app no And. Studio</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
 </table>
