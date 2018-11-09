@@ -39,14 +39,20 @@ Aplicação de culinaria
     <td>3</td>
   </tr>
   <tr>
-    <td>José Mauricio</td>
+    <td>Alexandre Pereira</td>
     <td>Base de Dados</td>
-    <td>--</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>4</td>
   </tr>
    <tr>
     <td>André Fuertes</td>
     <td>Seleção de WebTemplate, Server Setup & Design da app no And. Studio</td>
+    <td>--</td>
+    <td>--</td>
+  </tr>
+   <tr>
+    <td>José Mauricio</td>
+    <td>Servidor</td>
     <td>--</td>
     <td>--</td>
   </tr>
