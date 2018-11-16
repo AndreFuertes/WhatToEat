@@ -47,7 +47,7 @@ Aplicação de culinaria
    <tr>
     <td>André Fuertes</td>
     <td>Seleção de WebTemplate, Server Setup & Design da app no And. Studio</td>
-    <td>--</td>
+    <td>Sim</td>
     <td>--</td>
   </tr>
    <tr>
