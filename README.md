@@ -52,19 +52,19 @@ Aplicação de culinaria
   </tr>
    <tr>
     <td>José Mauricio</td>
-    <td>Servidor</td>
+    <td>Elaboração de lista de comandos para configuração de servidor e instalação na máquina virtual definitiva</td>
     <td>?</td>
     <td>--</td>
   </tr>
    <tr>
     <td>Alexandre Pereira</td>
-    <td>Elaboração de lista de comandos para configuração de servidor e instalação na máquina virtual definitiva</td>
+    <td>Iniciação da elaboração das alterações no template do site</td>
     <td>Não</td>
     <td>--</td>
   </tr>
   <tr>
     <td>André Fuertes</td>
-    <td>Iniciação da elaboração das alterações no template do site</td>
+    <td>Iniciação da estrutura da app no Android Studio</td>
     <td>Não</td>
     <td>--</td>
   
