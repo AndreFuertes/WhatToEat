@@ -1,0 +1,129 @@
+System Hostname: WTEat.app
+
+new User fullname:JoseFranciscoPinelaMauricio
+
+username:eatuser
+password:root
+
+
+MySQL root user Pass: root
+
+no proxy.
+
+
+
+Software selection:
+OpenSSH server
+Basic Ubuntu Server
+
+
+localhost:8080
+
+Commands:
+
+sudo apt-get update
+
+sudo apt-get install apache2
+
+sudo apt-get install mysql-server
+
+sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+
+sudo apt-get  install build-essential linux-headers-virtual dkms nano zip unzip wget curl man-db acpid -y
+
+sudo apt-get upgrade -y
+
+change host file in windows C:\Windows\System32\drivers\etc\hosts
+
+Settings to utilize on putty
+
+Hostname: eatuser@WTEat.app port:2221
+
+PUTTY is now setup.
+
+cd /var/www
+sudo groupadd webmasters
+
+sudo adduser eatuser webmasters
+
+sudo adduser www-data webmasters
+
+sudo chown -R .webmasters html
+
+sudo chmod -R 775 html
+
+sudo reboot
+
+cd /etc/apache2
+
+cd sites-available/
+
+sudo cp 000-default.conf WTEat.conf
+
+sudo nano WTEat.conf
+
+cd ..
+
+sudoedit ports.conf
+
+sudo a2dissite 000-default.conf
+
+sudo a2ensite WTEat.conf
+
+sudo apache2 graceful
+
+sudo a2enmod rewrite
+
+sudo service apache2 graceful
+
+cd /var/www/html
+
+nano info.php
+
+nano errors.php
+
+cd /etc/php
+
+cd 7.0
+
+sudoedit mods-available/custom.ini
+
+sudo ln -s /etc/php/7.0/mods-available/custom.ini /etc/php/7.0/apache2/conf.d/20-custom.ini
+
+sudo touch /var/log/php_errors.log
+
+sudo chown .webmasters /var/log/php_errors.log
+
+cd~
+
+sudo apt-get install php-mbstring php7.0-mbstring php-gettext libapache2-mod-php7.0 libapache2-mod-php
+
+sudo phpenmod dmbstring
+
+sudo service apache2 restart
+
+sudo chmod 664 /var/log/php_errors.log
+
+sudoedit /etc/mysql/mysql.conf.d/mysqld.cnf
+
+sudo systemctl restart mysql.service
+
+mysql -uroot -proot
+
+SHOW DATABASES;
+
+SELECT host,user FROM mysql.user WHERE user='root';
+
+UPDATE mysql.user SET host='%' WHERE user='root';
+
+FLUSH PRIVILEGES;
+
+exit
+
+sudo apt-get -y install phpmyadmin
+
+sudoedit /etc/phpmyadmin/config.inc.php
+
+Authentication
+user:root
+password:root
