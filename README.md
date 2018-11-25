@@ -53,8 +53,8 @@ Aplicação de culinaria
    <tr>
     <td>José Mauricio</td>
     <td>Elaboração de lista de comandos para configuração de servidor e instalação na máquina virtual definitiva</td>
-    <td>?</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>3</td>
   </tr>
    <tr>
     <td>Alexandre Pereira</td>
