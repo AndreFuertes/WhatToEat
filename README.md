@@ -58,13 +58,13 @@ Aplicação de culinaria
   </tr>
    <tr>
     <td>Alexandre Pereira</td>
-    <td>Iniciação da elaboração das alterações no template do site</td>
+    <td>Iniciação da estrutura da app no Android Studio</td>
     <td>Não</td>
     <td>--</td>
   </tr>
   <tr>
     <td>André Fuertes</td>
-    <td>Iniciação da estrutura da app no Android Studio</td>
+    <td>Iniciação da elaboração das alterações no template do site </td>
     <td>Não</td>
     <td>--</td>
      </tr>
