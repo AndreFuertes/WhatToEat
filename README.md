@@ -67,5 +67,6 @@ Aplicação de culinaria
     <td>Iniciação da estrutura da app no Android Studio</td>
     <td>Não</td>
     <td>--</td>
+     </tr>
   
 </table>
