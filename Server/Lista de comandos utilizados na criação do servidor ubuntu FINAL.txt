@@ -130,3 +130,5 @@ password:root
 
 sudo adduser admin
 password: AppCulinaria.AJJ
+
+sudo usermod -aG sudo admin
