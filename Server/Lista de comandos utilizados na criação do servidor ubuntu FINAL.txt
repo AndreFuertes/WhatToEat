@@ -60,7 +60,7 @@ cd sites-available/
 
 sudo cp 000-default.conf WTEat.conf
 
-sudo nano WTEat.conf
+sudo nano WTEat.conf  (servername: AppCulinaria  server alias *.ajj)
 
 cd ..
 
@@ -121,6 +121,8 @@ FLUSH PRIVILEGES;
 exit
 
 sudo apt-get -y install phpmyadmin
+
+phpmyadmin password: root
 
 sudoedit /etc/phpmyadmin/config.inc.php
 
