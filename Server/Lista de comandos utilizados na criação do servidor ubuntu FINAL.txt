@@ -127,3 +127,6 @@ sudoedit /etc/phpmyadmin/config.inc.php
 Authentication
 user:root
 password:root
+
+sudo adduser admin
+password: AppCulinaria.AJJ
