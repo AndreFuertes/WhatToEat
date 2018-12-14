@@ -17,8 +17,6 @@ OpenSSH server
 Basic Ubuntu Server
 
 
-localhost:8080
-
 Commands:
 
 sudo apt-get update
