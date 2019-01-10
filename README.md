@@ -59,8 +59,8 @@ Aplicação de culinaria
    <tr>
     <td>Alexandre Pereira</td>
     <td>Iniciação da estrutura da app no Android Studio</td>
-    <td>Não</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>4</td>
   </tr>
   <tr>
     <td>André Fuertes</td>
@@ -68,5 +68,18 @@ Aplicação de culinaria
     <td>Não</td>
     <td>--</td>
      </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Função da Aplicação: Temporizador</td>
+    <td>Não</td>
+    <td>--</td>
+  </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Função da Aplicação: Conversor</td>
+    <td>Não</td>
+    <td>--</td>
+  </tr>
+  
   
 </table>
