@@ -83,8 +83,8 @@ Aplicação de culinaria
     <tr>
     <td>José Mauricio</td>
     <td>Ligação: Server -> API -> Aplicação e Aplicação -> API -> Server</td>
-    <td>Sim</td>
-    <td>4</td>
+    <td>Não</td>
+    <td>--</td>
   </tr>
   
   
