@@ -80,6 +80,12 @@ Aplicação de culinaria
     <td>Não</td>
     <td>--</td>
   </tr>
+    <tr>
+    <td>José Mauricio</td>
+    <td>Ligação: Server -> API -> Aplicação e Aplicação -> API -> Server</td>
+    <td>Sim</td>
+    <td>4</td>
+  </tr>
   
   
 </table>
