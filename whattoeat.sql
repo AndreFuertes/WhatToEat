@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2018 at 12:08 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Generation Time: 18-Jan-2019 às 13:37
+-- Versão do servidor: 10.1.36-MariaDB
+-- versão do PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `favorites`
+-- Estrutura da tabela `favorites`
 --
 
 CREATE TABLE `favorites` (
@@ -37,7 +37,7 @@ CREATE TABLE `favorites` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `likes`
+-- Estrutura da tabela `likes`
 --
 
 CREATE TABLE `likes` (
@@ -49,7 +49,7 @@ CREATE TABLE `likes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Estrutura da tabela `posts`
 --
 
 CREATE TABLE `posts` (
@@ -58,13 +58,21 @@ CREATE TABLE `posts` (
   `description` text NOT NULL,
   `image` text NOT NULL,
   `user_id` int(11) NOT NULL,
-  `flag_active` tinyint(1) NOT NULL
+  `flag_active` tinyint(1) NOT NULL,
+  `type` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `title`, `description`, `image`, `user_id`, `flag_active`, `type`) VALUES
+(1, 'receita teste', 'descricao da receita teste', 'ss-carne', 0, 1, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura da tabela `users`
 --
 
 CREATE TABLE `users` (
@@ -134,7 +142,7 @@ ALTER TABLE `likes`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
