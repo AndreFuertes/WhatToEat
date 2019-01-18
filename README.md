@@ -81,14 +81,14 @@ Aplicação de culinaria
     <td>4</td>
   </tr>
   <tr>
-    <td>Alexandre Pereira</td>
-    <td>Função da Aplicação: Conversor</td>
+    <td>José Mauricio</td>
+    <td>Ligação: Server -> API -> Aplicação |||| Aplicação -> API -> Server</td>
     <td>Não</td>
     <td>--</td>
   </tr>
     <tr>
-    <td>José Mauricio</td>
-    <td>Ligação: Server -> API -> Aplicação |||| Aplicação -> API -> Server</td>
+    <td>Alexandre Pereira</td>
+    <td>Construção da API</td>
     <td>Não</td>
     <td>--</td>
   </tr>
