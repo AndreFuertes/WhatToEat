@@ -71,8 +71,14 @@ Aplicação de culinaria
   <tr>
     <td>Alexandre Pereira</td>
     <td>Função da Aplicação: Temporizador</td>
-    <td>Não</td>
-    <td>--</td>
+    <td>Sim</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Função da Aplicação: Lista de Compras e Despensa</td>
+    <td>Sim</td>
+    <td>4</td>
   </tr>
   <tr>
     <td>Alexandre Pereira</td>
