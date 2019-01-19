@@ -79,13 +79,9 @@ CREATE TABLE `users` (
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `username` text NOT NULL,
   `password` text NOT NULL,
-  `first_name` text NOT NULL,
-  `last_name` text NOT NULL,
-  `birthday_date` text NOT NULL,
   `email` text NOT NULL,
   `picture` text NOT NULL,
-  `token` text NOT NULL,
-  `flg_active` tinyint(1) NOT NULL
+  `token` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
