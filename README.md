@@ -80,15 +80,21 @@ Aplicação de culinaria
     <td>Sim</td>
     <td>4</td>
   </tr>
-  <tr>
-    <td>José Mauricio</td>
-    <td>Ligação: Server -> API -> Aplicação |||| Aplicação -> API -> Server</td>
-    <td>Não</td>
-    <td>--</td>
-  </tr>
-    <tr>
+   <tr>
     <td>Alexandre Pereira</td>
     <td>Construção da API</td>
+    <td>Sim</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>José Mauricio</td>
+    <td>Função da Aplicação: Conversor de medidas</td>
+    <td>Sim</td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Implementação das SharedPreferences para auxiliar o Login</td>
     <td>Sim</td>
     <td>4</td>
   </tr>
