@@ -1,0 +1,26 @@
+INSERT INTO users (user_id, username, password, email, picture, token)
+VALUES (1,'kyiv','VRZpFq9C','kyiv@gmail.com','https://img2.thejournal.ie/inline/2470754/original/?width=428&version=2470754','true');
+VALUES (2,'scout','UCXqQEva','scout@gmail.com','https://2.bp.blogspot.com/-_lL6A07WTwU/WtgKCZS-g3I/AAAAAAAAF9s/95wTj08fzmAx7FuTLE89E9kfi6n87fRFQCEwYBhgL/s1600/cool%2Bprofile%2Bpicture.png','true');
+VALUES (3,'Vikingeris','NS7HGe8Z','Vikingeris@hotmail.com','https://i.imgur.com/itElfV3.jpg','true');
+VALUES (4,'Lilliputian','ehbbwFyL','Lilliputian@gmail.com','https://st2.depositphotos.com/1734074/12391/v/950/depositphotos_123916256-stock-illustration-white-human-head-face-profile.jpg','true');
+VALUES (5,'Unwonted','gDZMyCJt','Unwonted@gmail.com','http://i.imgur.com/YdhUZdZ.png','true');
+VALUES (6,'Tozegon3000','JEqScHzy','Tozegon3000@gmail.com','https://st2.depositphotos.com/1007566/11937/v/950/depositphotos_119372530-stock-illustration-young-male-profile-icon-vector.jpg','true');
+
+INSERT INTO posts (post_id, title, description, image, user_id, flag_active, type)
+VALUES (1,'1st Pic','Hello world','https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/portion_sizes_slideshow/getty_rm_photo_of_fish_meal_on_small_plate.jpg',2,1,1);
+VALUES (2,'WOW',' Delicious','https://static1.squarespace.com/static/57ea401815d5db35a6482940/t/5a4bbda80d9297a80fb7bebc/1515077798039/limahl-asmall-tiny-budget-cooking-nhs-guide-healthy-plate-food-eat-well-katie-robinson-guide.jpg',5,1,1);
+VALUES (3,'How does it look ?', ' :) ', 'http://www.bloomsimports.com/wp-content/uploads/2015/05/shrimp-small-cooked.jpg',6 , 0, 0,
+
+
+INSERT INTO likes (like_id, post_id, user_id)
+VALUES(1,1,1)
+VALUES(2,1,3)
+VALUES(3,1,5)
+VALUES(4,2,4)
+VALUES(5,3,4)
+
+INSERT INTO favorites (favorite_id, user_id, post_id)
+VALUES(1,1,1)
+VALUES(2,4,2)
+VALUES(3,6,1)
+VALUES(4,2,3)
