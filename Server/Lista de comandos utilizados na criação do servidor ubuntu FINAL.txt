@@ -1,5 +1,8 @@
 System Hostname: WTEat.app
 
+SQL PASS: WTEATSQL
+
+
 new User fullname:JoseFranciscoPinelaMauricio
 
 username:eatuser
@@ -8,7 +11,8 @@ password:root
 School Server Login: admin
 Password:AppCulinaria.AJJ
 
-MySQL root user Pass: root
+PHPMYADMIN USER: root
+PHPMYADMIN PASS: root
 
 no proxy.
 
