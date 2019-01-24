@@ -101,8 +101,8 @@ Aplicação de culinaria
   <tr>
     <td>Alexandre Pereira</td>
     <td>Adicionar o código necessário para a app consumir dados da API</td>
-    <td>Não</td>
-    <td>-</td>
+    <td>Sim</td>
+    <td>3</td>
   </tr>
   
   
