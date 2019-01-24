@@ -106,7 +106,7 @@ Aplicação de culinaria
   </tr>
   <tr>
     <td>Alexandre Pereira</td>
-    <td>Implementação da Função: Listar os publicações dos Utilizadores</td>
+    <td>Implementação da Função: Listar as publicações dos Utilizadores</td>
     <td>Sim</td>
     <td>2</td>
   </tr>
