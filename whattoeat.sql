@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Jan-2019 às 13:37
--- Versão do servidor: 10.1.36-MariaDB
--- versão do PHP: 7.2.10
+-- Generation Time: 24-Jan-2019 às 19:18
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,6 +46,19 @@ CREATE TABLE `likes` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `likes`
+--
+
+INSERT INTO `likes` (`like_id`, `post_id`, `user_id`) VALUES
+(2, 1, 1),
+(3, 1, 2),
+(4, 2, 1),
+(5, 2, 2),
+(6, 3, 1),
+(7, 3, 2),
+(8, 4, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -67,7 +80,12 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `title`, `description`, `image`, `user_id`, `flag_active`, `type`) VALUES
-(1, 'receita teste', 'descricao da receita teste', 'ss-carne', 0, 1, 3);
+(1, 'Entrada', 'prato de entrada', 'ss-entrada', 1, 1, 1),
+(2, 'Sopa', 'prato de sopa', 'ss-sopa', 2, 1, 2),
+(3, 'Peixe', 'prato de peixe', 'ss-peixe', 3, 1, 4),
+(4, 'Salada', 'prato de salada', 'ss-salada', 1, 1, 5),
+(5, 'Vegan', 'prato vegan', 'ss-vegan', 2, 1, 6),
+(6, 'Sobremeza', 'prato de sobremesa', 'ss-sobremesa', 3, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -83,6 +101,15 @@ CREATE TABLE `users` (
   `picture` text NOT NULL,
   `token` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `picture`, `token`) VALUES
+(1, 'Alexandre Pereira', '1234', 'alexandre.pereira@hotmail.com', '', ''),
+(2, 'André Fuertes', '1234', 'andrefuertes@gmail.com', '', ''),
+(3, 'José Mauricio', '1234', 'josemauricio@hotmail.com', '', '');
 
 --
 -- Indexes for dumped tables
@@ -133,19 +160,19 @@ ALTER TABLE `favorites`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `like_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `like_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
