@@ -6,16 +6,16 @@
  * Time: 18:22
  */
 
-include_once "model/Favorites";
-include_once "model/Likes";
-include_once "model/Posts";
-include_once "model/Users";
+include_once "model/Favorites.php";
+include_once "model/Likes.php";
+include_once "model/Posts.php";
+include_once "model/Users.php";
 
 class DBManager
 {
     private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
+    private $username = "twdm";
+    private $password = "password";
     private $dbname = "whattoeat";
 
     private $conn;
@@ -39,13 +39,15 @@ class DBManager
 
     public function loginUser($username, $password) {
         $passwordHash = password_hash($password, PASSWORD_BCRYPT);
+
+       // password_verify(password,//)
         /* create a prepared statement */
         $stmt = $this->conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
         if (false===$stmt ) {
             die('prepare() failed: ' . htmlspecialchars($this->conn->error));
         } else {
             /* bind parameters for markers */
-            $stmt->bind_param("ss", $username, $password);
+            $stmt->bind_param("ss", $username,$password);
 
             /* execute query */
             $stmt->execute();
@@ -66,15 +68,16 @@ class DBManager
         $passwordCrypt = password_hash($user->getPassword(), PASSWORD_BCRYPT);
         $token = bin2hex(random_bytes(64));
         /* create a prepared statement */
-        $stmt = $this->conn->prepare("INSERT INTO users (user_id, username, password, first_name, last_name, birthday_date, email, picture, token, flag_active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $this->conn->prepare("INSERT INTO users ( username, password, email, picture, token) VALUES (?, ?, ?, ?, ?)");
         if (false===$stmt ) {
             die('prepare() failed: ' . htmlspecialchars($this->conn->error));
         } else {
             /* bind parameters for markers */
-            $name = $user->getUsername();
-            $email = $user->getEmail();
+            $username = $user->getUsername();
             $password = $user->getPassword();
-            $stmt->bind_param("ssss", $username, $email, $password, $token);
+            $email = $user->getEmail();
+           $picture = $user->getPicture();
+            $stmt->bind_param("sssss", $username, $password, $email, $picture, $token);
             /* execute query */
             $stmt->execute();
             /* close statement */
@@ -108,6 +111,120 @@ class DBManager
         }
 
     }
+
+    public function getAllPosts(){
+        $stmt = $this->conn->prepare("SELECT * FROM posts");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+
+            $data = [];
+            /* execute query */
+            $stmt->execute();
+
+            // Extract result set and loop rows
+            $result = $stmt->get_result();
+
+            while($row = $result->fetch_assoc()) {
+                $post = new Posts($row['post_id'], $row['title'], $row['description'], $row['image'], $row['user_id'], $row['flag_active'], $row['type']);
+                array_push($data, $post);
+            }
+            $stmt->close();
+            return $data;
+        }
+    }
+
+    public function checkIfLikeExists($postId, $userId){
+        $stmt = $this->conn->prepare("SELECT * FROM likes WHERE id_post = ? AND id_user = ?");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll",$postId, $userId);
+            /* execute query */
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+            /* close statement */
+            $stmt->close();
+            if ($result->fetch_assoc()) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    public function insertLike($postId, $userId){
+        $stmt = $this->conn->prepare("INSERT INTO likes (post_id, user_id) VALUES (?, ?)");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll", $postId, $userId);
+            /* execute query */
+            $stmt->execute();
+            /* close statement */
+            $stmt->close();
+        }
+    }
+
+    public function removeLike($postId, $userId){
+        $stmt = $this->conn->prepare("DELETE FROM likes WHERE post_id = ? AND user_id = ?");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll",$postId, $userId);
+            /* execute query */
+            $stmt->execute();
+            /* close statement */
+            $stmt->close();
+        }
+    }
+
+
+    public function checkIfFavExists($userId, $postId){
+        $stmt = $this->conn->prepare("SELECT * FROM favorites WHERE id_user = ? AND id_post = ?");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll",$userId, $postId);
+            /* execute query */
+            $stmt->execute();
+            /* close statement */
+            $stmt->close();
+        }
+    }
+
+    public function insertFav($userId, $postId){
+        $stmt = $this->conn->prepare("INSERT INTO favorites (user_id, post_id) VALUES (?, ?)");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll", $userId, $postId);
+            /* execute query */
+            $stmt->execute();
+            /* close statement */
+            $stmt->close();
+        }
+    }
+
+    public function removeFav($postId, $userId){
+        $stmt = $this->conn->prepare("DELETE FROM favorites WHERE user_id = ? AND post_id = ?");
+        if (false===$stmt ) {
+            die('prepare() failed: ' . htmlspecialchars($this->conn->error));
+        } else {
+            /* bind parameters for markers */
+            $stmt->bind_param("ll",$userId, $postId);
+            /* execute query */
+            $stmt->execute();
+            /* close statement */
+            $stmt->close();
+        }
+    }
+
 
     public function closeConnection()
     {

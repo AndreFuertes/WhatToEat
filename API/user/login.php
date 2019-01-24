@@ -25,13 +25,14 @@ if (!empty($input->username) && !empty($input->password)){
 
         echo json_encode($users);
 
-    }else{
-
-        $failureData = new users(-1, "","Not found" , "", "","");
-
-        echo json_encode($failureData);
-
     }
+    //else{
+//
+//        $failureData = new users(-1, "","Not found" , "", "","");
+//
+  //      echo json_encode($failureData);
+
+    //}
 
 
 }

@@ -125,9 +125,6 @@ class users implements JsonSerializable
         $this->token = $token;
     }
 
-
-
-
     public function jsonSerialize()
     {
 

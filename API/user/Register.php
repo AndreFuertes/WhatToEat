@@ -13,24 +13,24 @@ $dbManager = DBManager::getInstance();
 
 $input = json_decode(file_get_contents('php://input'));
 
-if(!empty($input->username) && !empty($input->email) &&  !empty($input->password)) {
+if(!empty($input->username) && !empty($input->email) && !empty($input->password)) {
 
     if($dbManager->searchUser($input->username) == null){
 
-        $users = new users(-1, $input->username, $input->password, $input->email_utilizador, "","" );
+        $users = new users(-1, $input->username, $input->password, $input->email, "","" );
         $newUsers = $dbManager->registerUser($users);
         $dbManager->closeConnection();
 
         echo json_encode($newUsers);
 
-    }else{
+    }/*else{
 
         $failureData = new users(-1, "USERNAME JÁ REGISTADO", "", "", "", "");
 
         echo json_encode($failureData);
 
 
-    }
+    }*/
 
 }
 ?>

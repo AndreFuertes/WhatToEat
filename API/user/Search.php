@@ -31,7 +31,6 @@ if(!empty($input->username) && !empty($input->email) && !empty($input->password)
 
     }
 
-
 }
 
 ?>
