@@ -104,6 +104,12 @@ Aplicação de culinaria
     <td>Sim</td>
     <td>3</td>
   </tr>
+  <tr>
+    <td>Alexandre Pereira</td>
+    <td>Implementação da Função: Listar os publicações dos Utilizadores</td>
+    <td>Sim</td>
+    <td>2</td>
+  </tr>
   
   
 </table>
